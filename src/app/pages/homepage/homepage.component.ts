@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,15 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private userService: UserService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   goToSignup() {
     this.router.navigateByUrl('/signup');
   }
 
   goToLogin() {
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('/login');
   }
 }

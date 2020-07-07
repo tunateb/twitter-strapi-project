@@ -13,6 +13,10 @@ export class AuthService {
     return this.http.post(`${this.baseUrl}/local/register`, signupData);
   }
 
+  login(loginData: object) {
+    return this.http.post(`${this.baseUrl}/local`, loginData);
+  }
+
   setToken(token: string) {
     window.localStorage.setItem('token', token);
   }

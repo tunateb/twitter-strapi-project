@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { UserService } from '../../services/user.service';
 import { AuthResponse } from 'src/app/types/authResponse.type';
@@ -20,7 +21,8 @@ export class SignupPageComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -47,5 +49,7 @@ export class SignupPageComponent implements OnInit {
     };
 
     this.isLoading = false;
+
+    this.router.navigateByUrl('/me')
   }
 }
