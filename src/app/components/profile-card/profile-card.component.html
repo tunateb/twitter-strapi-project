@@ -1,0 +1,55 @@
+<div class="profile-card">
+  <div class="header">
+    <img src="https://unsplash.it/597/198" alt="header image" />
+    <img src="https://unsplash.it/134/134" alt="avatar" class="avatar" />
+    <div class="profile-actions">
+      <button class="btn-dark">Edit Profile</button>
+      <button class="btn-dark">Logout</button>
+    </div>
+  </div>
+
+  <div class="profile-details">
+    <h3 class="profile-name">{{ user.username }}</h3>
+    <p class="profile-username">@{{ user.username }}</p>
+    <p class="profile-info">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit
+      diam, maximus vel euismod at, placerat nec quam.
+    </p>
+
+    <div class="contact-info">
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Istanbul, Turkey</span>
+      </div>
+      <div class="website">
+        <i class="fas fa-link"></i>
+        <span>
+          <a href="#" class="link">website.com</a>
+        </span>
+      </div>
+      <div class="join-date">
+        <i class="far fa-calendar-alt"></i>
+        <span>Joined October 2015</span>
+      </div>
+    </div>
+
+    <div class="follow-count">
+      <div class="follows">
+        <span>398</span>
+        <span class="follower-text">Following</span>
+      </div>
+      <div class="followers">
+        <span>556</span>
+        <span class="follower-text">Followers</span>
+      </div>
+    </div>
+  </div>
+  <div class="links-wrapper">
+    <div class="link-wrapper"><a href="#" class="link">Tweets</a></div>
+    <div class="link-wrapper">
+      <a href="#" class="link">Tweets & replies</a>
+    </div>
+    <div class="link-wrapper"><a href="#" class="link">Media</a></div>
+    <div class="link-wrapper"><a href="#" class="link">Likes</a></div>
+  </div>
+</div>

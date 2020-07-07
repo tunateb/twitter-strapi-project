@@ -1,0 +1,22 @@
+.header-top {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4ba0ec;
+  }
+
+  .header-top-name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .tweet-count {
+    font-size: 14px;
+    line-height: 17px;
+    color: #8a98a4;
+  }
+}

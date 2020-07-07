@@ -1,3 +1,12 @@
-<div class="container" *ngIf="user">
-  <h1>{{ user.username }}</h1>
+<div class="container grid-container">
+  <div class="bordered-container">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="bordered-container">
+    <app-profile-header></app-profile-header>
+    <app-tweets-page></app-tweets-page>
+  </div>
+  <div>
+    Sidebar
+  </div>
 </div>

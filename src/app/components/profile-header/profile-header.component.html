@@ -1,0 +1,19 @@
+<div class="header-container" *ngIf="user">
+
+  <div class="header-top">
+    <div class="back-link">
+      <i class="fas fa-arrow-left"></i>
+    </div>
+    <div class="header-top-info">
+      <h3 class="header-top-name">
+        {{ user.username }}
+      </h3>
+      <p class="tweet-count">
+        2,006 Tweets
+      </p>
+    </div>
+  </div>
+
+  <app-profile-card></app-profile-card>
+
+</div>

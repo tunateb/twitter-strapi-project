@@ -7,7 +7,7 @@ import { User } from '../types/user.type';
   providedIn: 'root',
 })
 export class UserService {
-  user: User;
+  private user: User;
 
   baseUrl = 'http://localhost:1337/users';
 
@@ -31,7 +31,10 @@ export class UserService {
         .get(`${this.baseUrl}/me`, {
           headers: { Authorization: `Bearer ${token}` },
         })
-        .subscribe((response: User) => (this.user = response));
+        .subscribe((response: User) => {
+          console.log(response);
+          (this.user = response)
+        });
 
       this.router.navigateByUrl('/me');
     }

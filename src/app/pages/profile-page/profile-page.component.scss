@@ -1,0 +1,11 @@
+.grid-container {
+  min-height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+
+  .bordered-container {
+    border-right: 1px solid #3a444c;
+    padding: 5px 0;
+  }
+}

@@ -9,6 +9,10 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProfileHeaderComponent } from './components/profile-header/profile-header.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { TweetsPageComponent } from './pages/tweets-page/tweets-page.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     SignupPageComponent,
     LoginPageComponent,
     ProfilePageComponent,
+    NavbarComponent,
+    ProfileHeaderComponent,
+    ProfileCardComponent,
+    TweetsPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

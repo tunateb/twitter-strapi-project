@@ -1,0 +1,108 @@
+.profile-card {
+  margin: 8px 0;
+  border: 1px solid #3a444c;
+
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .avatar {
+      border-radius: 50%;
+      border: 2px solid #3a444c;
+      position: absolute;
+      left: 1.5rem;
+      top: 8.5rem;
+    }
+
+    .profile-actions {
+      margin: 15px;
+
+      .btn-dark {
+        margin: 0 5px;
+        width: 150px;
+      }
+    }
+  }
+
+  .profile-details {
+    margin: 30px 15px;
+
+    .profile-name {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .profile-username {
+      font-size: 16px;
+      line-height: 19px;
+      color: #8a98a4;
+    }
+
+    .profile-info {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 10px 0;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 100px;
+      color: #8a98a4;
+      font-size: 16px;
+      line-height: 19px;
+
+      .link {
+        color: #4ba0ec;
+      }
+
+      span {
+        margin-left: 6px;
+      }
+    }
+
+    .follow-count {
+      display: flex;
+      justify-content: flex-start;
+      margin: 10px 0;
+      font-size: 15px;
+      line-height: 18px;
+
+      .follows {
+        margin-right: 20px;
+      }
+
+      .follower-text {
+        color: #8a98a4;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .links-wrapper {
+    display: flex;
+    text-align: center;
+
+    .link-wrapper {
+      padding: 16px 0;
+      width: 25%;
+      border: 1px solid transparent;
+
+      &:hover {
+          border-bottom: 1px solid #4ba0ec;
+      }
+
+      a {
+          color: #8a98a4;
+          font-size: 15px;
+
+          &:hover {
+              color: #4ba0ec;
+          }
+      }
+    }
+  }
+}
