@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
+import { TweetService } from '../../services/tweet.service';
 
 @Component({
   selector: 'app-homepage',
@@ -8,17 +7,13 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(private tweetService: TweetService) {}
 
   ngOnInit(): void {
-    
+    this.tweetService.getTweetFlow();
   }
 
-  goToSignup() {
-    this.router.navigateByUrl('/signup');
-  }
-
-  goToLogin() {
-    this.router.navigateByUrl('/login');
+  get tweets() {
+    return this.tweetService.getTweets();
   }
 }

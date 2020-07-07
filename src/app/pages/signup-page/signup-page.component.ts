@@ -39,17 +39,7 @@ export class SignupPageComponent implements OnInit {
     this.authService.signup(signupData).subscribe((response: AuthResponse) => {
       this.authService.setToken(response.jwt);
       this.userService.setUser(response.user);
+      this.router.navigateByUrl('/home');
     });
-
-    this.form = {
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-    };
-
-    this.isLoading = false;
-
-    this.router.navigateByUrl('/me')
   }
 }

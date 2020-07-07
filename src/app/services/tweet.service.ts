@@ -1,12 +1,24 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Tweet } from '../types/tweet.type';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TweetService {
+  baseUrl = 'http://localhost:1337';
 
-  tweets;
+  private tweets: Tweet[];
 
-  constructor() { }
-  
+  constructor(private http: HttpClient) {}
+
+  getTweetFlow() {
+    this.http
+      .get(`${this.baseUrl}/tweets`)
+      .subscribe((response: Tweet[]) => (this.tweets = response));
+  }
+
+  getTweets() {
+    return this.tweets;
+  }
 }

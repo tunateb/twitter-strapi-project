@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomepageComponent } from './homepage.component';
+import { TweetCardComponent } from './tweet-card.component';
 
-describe('HomepageComponent', () => {
-  let component: HomepageComponent;
-  let fixture: ComponentFixture<HomepageComponent>;
+describe('TweetCardComponent', () => {
+  let component: TweetCardComponent;
+  let fixture: ComponentFixture<TweetCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomepageComponent],
-    }).compileComponents();
+      declarations: [ TweetCardComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomepageComponent);
+    fixture = TestBed.createComponent(TweetCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

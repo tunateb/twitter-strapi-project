@@ -1,4 +1,4 @@
-<div class="tweet-card" *ngFor="let tweet of tweets">
+<div class="tweet-card">
   <div class="avatar-wrapper">
     <img src="https://unsplash.it/49/49" alt="avatar" class="avatar" />
   </div>
@@ -13,14 +13,18 @@
     <p class="tweet-text">{{ tweet.text }}</p>
 
     <div class="image-wrapper" *ngFor="let image of tweet.image">
-      <img [src]="baseUrl + image.url" [alt]="image.alternativeText" class="tweet-img"/>
+      <img
+        [src]="baseUrl + image.url"
+        [alt]="image.alternativeText"
+        class="tweet-img"
+      />
     </div>
 
     <div class="tweet-actions">
-        <i class="far fa-comment"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
-        <i class="fas fa-external-link-alt"></i>
+      <i class="far fa-comment"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-external-link-alt"></i>
     </div>
   </div>
 </div>

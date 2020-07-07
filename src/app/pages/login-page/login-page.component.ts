@@ -12,6 +12,8 @@ import { AuthResponse } from '../../types/authResponse.type';
 export class LoginPageComponent implements OnInit {
   isLoading = false;
 
+  id: number;
+
   form = {
     identifier: '',
     password: '',
@@ -31,15 +33,8 @@ export class LoginPageComponent implements OnInit {
     this.authService.login(this.form).subscribe((response: AuthResponse) => {
       this.authService.setToken(response.jwt);
       this.userService.setUser(response.user);
+      this.id = response.user.id;
+      this.router.navigateByUrl('/home');
     });
-
-    this.form = {
-      identifier: '',
-      password: '',
-    };
-
-    this.isLoading = false;
-
-    this.router.navigateByUrl('/me');
   }
 }

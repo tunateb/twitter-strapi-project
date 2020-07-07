@@ -22,28 +22,29 @@
     }
 
     .tweet-time {
-        color: #8a98a4;
+      color: #8a98a4;
     }
   }
 
   .tweet-text {
-      font-size: 16px;
-      line-height: 24px;
-      margin: 5px 0;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 5px 0;
   }
 
   .tweet-img {
-      width: 508px;
-      height: 266px;
-      border-radius: 14px;
-      margin-top: 20px;
+    width: 508px;
+    height: 266px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-top: 20px;
   }
 
   .tweet-actions {
-      color: #8a98a4;
-      display: flex;
-      justify-content: space-between;
-      padding-right: 80px;
-      margin-top: 20px;
+    color: #8a98a4;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    margin-top: 20px;
   }
 }
