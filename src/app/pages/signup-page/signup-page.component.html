@@ -1,1 +1,66 @@
-<p>signup-page works!</p>
+<div class="card">
+  <form (submit)="onSubmit()">
+    <div class="logo-wrapper">
+      <a routerLink="/" class="logo link">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+
+    <h3 class="form-title">Create your account</h3>
+    <div class="form-control">
+      <label for="username">
+        Username
+        <input
+          type="text"
+          name="username"
+          id="username"
+          [(ngModel)]="form.username"
+        />
+      </label>
+    </div>
+
+    <div class="form-control">
+      <label for="email">
+        Email
+        <input type="email" name="email" id="email" [(ngModel)]="form.email" />
+      </label>
+    </div>
+
+    <div class="form-control">
+      <label for="password">
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="form.password"
+        />
+      </label>
+    </div>
+
+    <div class="form-control">
+      <label for="c-password">
+        Confirm Password
+        <input
+          type="password"
+          name="c-password"
+          id="c-password"
+          [(ngModel)]="form.confirmPassword"
+        />
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-light" type="submit" [disabled]="isLoading">
+        {{ isLoading ? "Loading..." : "Create Account" }}
+      </button>
+
+      <hr />
+
+      <p>
+        Already have an account?
+        <a routerLink="/login" class="link decorated-link">Login</a>
+      </p>
+    </div>
+  </form>
+</div>

@@ -1,15 +1,51 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
+import { AuthResponse } from 'src/app/types/authResponse.type';
 
 @Component({
   selector: 'app-signup-page',
   templateUrl: './signup-page.component.html',
-  styleUrls: ['./signup-page.component.scss']
+  styleUrls: ['./signup-page.component.scss'],
 })
 export class SignupPageComponent implements OnInit {
+  form = {
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  };
 
-  constructor() { }
+  isLoading = false;
 
-  ngOnInit(): void {
+  constructor(
+    private authService: AuthService,
+    private userService: UserService
+  ) {}
+
+  ngOnInit(): void {}
+
+  onSubmit() {
+    this.isLoading = true;
+
+    const signupData = {
+      username: this.form.username,
+      email: this.form.email,
+      password: this.form.password,
+    };
+
+    this.authService.signup(signupData).subscribe((response: AuthResponse) => {
+      this.authService.setToken(response.jwt);
+      this.userService.setUser(response.user);
+    });
+
+    this.form = {
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    };
+
+    this.isLoading = false;
   }
-
 }
