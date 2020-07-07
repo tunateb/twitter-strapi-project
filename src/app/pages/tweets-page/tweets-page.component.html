@@ -1,1 +1,26 @@
-<p>tweets-page works!</p>
+<div class="tweet-card" *ngFor="let tweet of tweets">
+  <div class="avatar-wrapper">
+    <img src="https://unsplash.it/49/49" alt="avatar" class="avatar" />
+  </div>
+
+  <div class="tweet-info">
+    <p class="user-info">
+      <span class="user-name">{{ tweet.user.username }}</span>
+      <span class="user-username">@{{ tweet.user.username }} - </span>
+      <span class="tweet-time">{{ tweet.time | date: "short" }}</span>
+    </p>
+
+    <p class="tweet-text">{{ tweet.text }}</p>
+
+    <div class="image-wrapper" *ngFor="let image of tweet.image">
+      <img [src]="baseUrl + image.url" [alt]="image.alternativeText" class="tweet-img"/>
+    </div>
+
+    <div class="tweet-actions">
+        <i class="far fa-comment"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+        <i class="fas fa-external-link-alt"></i>
+    </div>
+  </div>
+</div>

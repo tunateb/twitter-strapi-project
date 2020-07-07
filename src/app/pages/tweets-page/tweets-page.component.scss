@@ -1,0 +1,49 @@
+.tweet-card {
+  width: 100%;
+  border-bottom: 1px solid #3a444c;
+  padding: 15px;
+  display: flex;
+
+  .avatar-wrapper {
+    margin-right: 10px;
+
+    .avatar {
+      border-radius: 50%;
+    }
+  }
+
+  .user-info {
+    font-size: 16px;
+    line-height: 20px;
+
+    .user-username {
+      color: #8a98a4;
+      margin: 0 10px;
+    }
+
+    .tweet-time {
+        color: #8a98a4;
+    }
+  }
+
+  .tweet-text {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 5px 0;
+  }
+
+  .tweet-img {
+      width: 508px;
+      height: 266px;
+      border-radius: 14px;
+      margin-top: 20px;
+  }
+
+  .tweet-actions {
+      color: #8a98a4;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 80px;
+      margin-top: 20px;
+  }
+}
