@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.btn-light {
+  cursor: pointer;
+  background-color: #4ba0ec;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 100px;
+  color: #fff;
+
+  &:hover {
+    background-color: darken(#4ba0ec, 10%);
+  }
+}
+
+.btn-dark {
+  cursor: pointer;
+  background-color: #17202a;
+  border: 1px solid #4ba0ec;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 100px;
+  color: #4ba0ec;
+
+  &:hover {
+    background-color: lighten(#17202a, 10%);
+  }
+}
