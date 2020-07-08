@@ -15,6 +15,7 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { TweetCardComponent } from './components/tweet-card/tweet-card.component';
 import { TweetformComponent } from './components/tweetform/tweetform.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TweetformComponent } from './components/tweetform/tweetform.component';
     HomepageComponent,
     TweetCardComponent,
     TweetformComponent,
+    SidebarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -1,0 +1,84 @@
+.side-container {
+  margin: auto;
+  padding: 15px 30px;
+
+  .input-wrapper {
+    position: relative;
+
+    .search-icon {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+    }
+
+    .search {
+      width: 345px;
+      height: 40px;
+      border-radius: 100px;
+      padding: 10px 50px;
+      outline: none;
+      background-color: #283340;
+      border: none;
+
+      &:focus {
+        border: 1px solid #4ba0ec;
+      }
+    }
+  }
+
+  .media-card {
+    border-radius: 14px;
+    margin: 17px 0;
+  }
+
+  .card {
+    border-radius: 14px;
+    background-color: #1c2733;
+    margin: 17px 0;
+    padding: 10px 0;
+
+    .card-title {
+      border-bottom: 1px solid #3a444c;
+      padding: 10px 0;
+
+      h3 {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0 15px;
+      }
+    }
+
+    .user-card {
+      border-bottom: 1px solid #3a444c;
+      margin: 11px 0;
+      padding: 10px 15px;
+      display: grid;
+      grid-template-columns: 3fr 8fr 2fr;
+
+      .avatar {
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      p {
+        color: #8a98a4;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .btn-dark {
+        width: 79px;
+        height: 30px;
+        padding: 5px 15px;
+      }
+    }
+    .card-link {
+      color: #4ba0ec;
+      margin: 15px;
+    }
+  }
+}
