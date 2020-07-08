@@ -3,11 +3,11 @@
     <img src="https://unsplash.it/49/49" alt="avatar" class="avatar" />
   </div>
 
-  <div class="tweet-info">
+  <div class="tweet-info" *ngIf="tweet">
     <p class="user-info">
       <span class="user-name">{{ tweet.user.username }}</span>
       <span class="user-username">@{{ tweet.user.username }} - </span>
-      <span class="tweet-time">{{ tweet.time | date: "short" }}</span>
+      <span class="tweet-time">{{ tweet.created_at | date: "short" }}</span>
     </p>
 
     <p class="tweet-text">{{ tweet.text }}</p>

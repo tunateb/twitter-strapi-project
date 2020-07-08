@@ -1,13 +1,20 @@
 <div class="profile-card">
   <div class="header">
-    <img src="https://unsplash.it/597/198" alt="header image" />
-    <img src="https://unsplash.it/134/134" alt="avatar" class="avatar" />
+    <img
+      src="http://localhost:1337/uploads/photo_1494253109108_2e30c049369b_12e164bbca.jpeg"
+      alt="header image"
+      class="header-img"
+    />
+    <img
+      src="http://localhost:1337/uploads/my_Avatar_22c3970cb2.png"
+      alt="avatar"
+      class="avatar"
+    />
     <div class="profile-actions">
       <button class="btn-dark">Edit Profile</button>
-      <button class="btn-dark">Logout</button>
     </div>
   </div>
-
+  
   <div class="profile-details">
     <h3 class="profile-name">{{ user.username }}</h3>
     <p class="profile-username">@{{ user.username }}</p>

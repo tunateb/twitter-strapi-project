@@ -4,7 +4,7 @@
   </div>
 
   <div class="tweet-form">
-    <form>
+    <form (submit)="tweet()">
       <label for="tweet-text">
         <textarea
           name="tweet-text"
@@ -14,6 +14,7 @@
           maxlength="140"
           placeholder="What's happening?"
           class="tweet-form-input"
+          [(ngModel)]="form.text"
         ></textarea>
       </label>
       <div class="form-actions">
@@ -22,7 +23,9 @@
           <a href="#" class="form-action"><i class="far fa-smile"></i></a>
         </div>
         <div>
-          <div class="btn-light">Tweet</div>
+          <div>
+            <button class="btn-light" type="submit">Tweet</button>
+          </div>
         </div>
       </div>
     </form>

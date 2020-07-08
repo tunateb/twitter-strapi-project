@@ -7,7 +7,7 @@
     </li>
 
     <li class="nav-item">
-      <a routerLink="/" class="nav-link">
+      <a routerLink="/home" class="nav-link">
         <div><i class="fas fa-home"></i></div>
         <div>
           <strong class="nav-link-text">Home</strong>
@@ -64,7 +64,11 @@
       <a routerLink="/" class="nav-link">
         <div><i class="far fa-user"></i></div>
         <div>
-          <strong class="nav-link-text">Profile</strong>
+          <strong class="nav-link-text"
+            ><a [routerLink]="'/users/' + user.id" *ngIf="user" class="link"
+              >Profile</a
+            ></strong
+          >
         </div>
       </a>
     </li>
@@ -79,5 +83,5 @@
     </li>
   </ul>
 
-  <button class="btn-light">Tweet</button>
+  <button class="btn-dark" (click)="logout()">Logout</button>
 </nav>

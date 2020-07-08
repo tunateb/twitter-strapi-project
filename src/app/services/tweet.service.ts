@@ -14,11 +14,23 @@ export class TweetService {
 
   getTweetFlow() {
     this.http
-      .get(`${this.baseUrl}/tweets`)
+      .get(`${this.baseUrl}/tweets?_sort=created_at:DESC`)
       .subscribe((response: Tweet[]) => (this.tweets = response));
   }
 
   getTweets() {
     return this.tweets;
+  }
+
+  pushTweet(newTweet) {
+    this.tweets.push(newTweet);
+  }
+
+  postTweet(tweetData) {
+    const token = window.localStorage.getItem('token');
+
+    return this.http.post(`${this.baseUrl}/tweets`, tweetData, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
   }
 }
