@@ -12,7 +12,7 @@ export class TweetService {
 
   constructor(private http: HttpClient) {}
 
-  getTweetFlow() {
+  getAllTweets() {
     this.http
       .get(`${this.baseUrl}/tweets?_sort=created_at:DESC`)
       .subscribe((response: Tweet[]) => (this.tweets = response));
@@ -22,11 +22,11 @@ export class TweetService {
     return this.tweets;
   }
 
-  pushTweet(newTweet) {
+  pushTweet(newTweet: Tweet) {
     this.tweets.push(newTweet);
   }
 
-  postTweet(tweetData) {
+  postTweet(tweetData: object) {
     const token = window.localStorage.getItem('token');
 
     return this.http.post(`${this.baseUrl}/tweets`, tweetData, {

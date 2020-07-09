@@ -4,9 +4,13 @@
   </div>
 
   <div class="bordered-container">
-    <h3 class="home-title">Home</h3>
+    <div class="back-link">
+      <a routerLink="/home" class="link"><i class="fas fa-arrow-left"></i></a>
+      <h3>Tweet</h3>
+    </div>
+    <app-detailed-tweet-card [tweet]="tweet"></app-detailed-tweet-card>
     <app-tweetform [formPlaceholder] = "formPlaceholder" [buttonText] = "buttonText"></app-tweetform>
-    <app-tweet-page></app-tweet-page>
+    
   </div>
 
   <app-sidebar></app-sidebar>

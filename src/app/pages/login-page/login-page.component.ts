@@ -25,7 +25,9 @@ export class LoginPageComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   onSubmit() {
     this.isLoading = true;

@@ -1,0 +1,72 @@
+.tweet-card {
+  width: 100%;
+  border-bottom: 1px solid #3a444c;
+  padding: 15px;
+
+  .tweet-info {
+    display: flex;
+  }
+
+  .avatar-wrapper {
+    margin-right: 10px;
+
+    .avatar {
+      border-radius: 50%;
+    }
+  }
+
+  .user-username {
+    font-size: 14px;
+    color: #8a98a4;
+    margin-bottom: 10px;
+  }
+
+  .tweet-text {
+    margin: 20px 0;
+  }
+
+  .tweet-img {
+    width: 508px;
+    height: 266px;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  .tweet-time {
+    font-size: 16px;
+    color: #8a98a4;
+    padding: 15px 0;
+    border-bottom: 1px solid #3a444c;
+  }
+
+  .reaction-count {
+    padding: 15px 0;
+    border-bottom: 1px solid #3a444c;
+
+    .retweet-count {
+      margin-right: 30px;
+
+      span {
+        color: #8a98a4;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+
+    .like-count {
+      span {
+        color: #8a98a4;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .tweet-actions {
+    color: #8a98a4;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    margin-top: 20px;
+  }
+}

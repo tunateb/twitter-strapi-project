@@ -16,6 +16,9 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { TweetCardComponent } from './components/tweet-card/tweet-card.component';
 import { TweetformComponent } from './components/tweetform/tweetform.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { TweetPageComponent } from './pages/tweet-page/tweet-page.component';
+import { TweetDetailsPageComponent } from './pages/tweet-details-page/tweet-details-page.component';
+import { DetailedTweetCardComponent } from './components/detailed-tweet-card/detailed-tweet-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     TweetCardComponent,
     TweetformComponent,
     SidebarComponent,
+    TweetPageComponent,
+    TweetDetailsPageComponent,
+    DetailedTweetCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

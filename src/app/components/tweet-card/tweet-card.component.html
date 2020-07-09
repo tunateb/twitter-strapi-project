@@ -1,4 +1,4 @@
-<div class="tweet-card">
+<div class="tweet-card" (click)="goToTweetDetails()">
   <div class="avatar-wrapper">
     <img src="https://unsplash.it/49/49" alt="avatar" class="avatar" />
   </div>
@@ -9,6 +9,7 @@
       <span class="user-username">@{{ tweet.user.username }} - </span>
       <span class="tweet-time">{{ tweet.created_at | date: "short" }}</span>
     </p>
+    <p class="reply-text" *ngIf="isComment">Replying to <span>@tunateb</span></p>
 
     <p class="tweet-text">{{ tweet.text }}</p>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Tweet } from 'src/app/types/tweet.type';
 
 @Component({
@@ -7,11 +8,16 @@ import { Tweet } from 'src/app/types/tweet.type';
   styleUrls: ['./tweet-card.component.scss'],
 })
 export class TweetCardComponent implements OnInit {
-  @Input() tweet: Tweet;
+  @Input() tweet;
+  @Input() isComment: boolean = false;
 
   baseUrl = 'http://localhost:1337';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  goToTweetDetails() {
+    this.router.navigateByUrl(`/tweets/${this.tweet.id}`);
+  }
 }

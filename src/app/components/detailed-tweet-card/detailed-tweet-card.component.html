@@ -1,0 +1,43 @@
+<div class="tweet-card">
+  <div class="tweet-details" *ngIf="tweet">
+    <div class="tweet-info">
+      <div class="avatar-wrapper">
+        <img src="https://unsplash.it/49/49" alt="avatar" class="avatar" />
+      </div>
+      <div class="user-info">
+        <p class="user-name">{{ tweet.user.username }}</p>
+        <p class="user-username">@{{ tweet.user.username }}</p>
+      </div>
+    </div>
+
+    <p class="tweet-text">{{ tweet.text }}</p>
+
+    <div class="image-wrapper" *ngFor="let image of tweet.image">
+      <img
+        [src]="baseUrl + image.url"
+        [alt]="image.alternativeText"
+        class="tweet-img"
+      />
+    </div>
+
+    <p class="tweet-time">{{ tweet.created_at | date: "short" }}</p>
+
+    <div class="reaction-count">
+      <span class="retweet-count">
+        <strong>162</strong>
+        <span>Retweets and comments</span>
+      </span>
+      <span class="like-count">
+        <strong>1K</strong>
+        <span>Likes</span>
+      </span>
+    </div>
+
+    <div class="tweet-actions">
+      <i class="far fa-comment"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-external-link-alt"></i>
+    </div>
+  </div>
+</div>

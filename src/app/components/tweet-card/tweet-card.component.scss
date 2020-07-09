@@ -3,6 +3,7 @@
   border-bottom: 1px solid #3a444c;
   padding: 15px;
   display: flex;
+  cursor: pointer;
 
   .avatar-wrapper {
     margin-right: 10px;
@@ -26,6 +27,10 @@
     }
   }
 
+  .tweet-info {
+    width: 100%;
+  }
+
   .tweet-text {
     font-size: 16px;
     line-height: 24px;
@@ -46,5 +51,13 @@
     justify-content: space-between;
     padding-right: 80px;
     margin-top: 20px;
+  }
+
+  .reply-text {
+    color: #8a98a4;
+    font-size: 14px;
+    span {
+      color: #4ba0ec;
+    }
   }
 }

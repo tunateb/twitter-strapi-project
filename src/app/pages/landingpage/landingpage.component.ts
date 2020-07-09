@@ -17,6 +17,7 @@ export class LandingpageComponent implements OnInit {
   }
 
   goToLogin() {
+    
     this.router.navigateByUrl('/login');
   }
 }

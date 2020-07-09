@@ -12,7 +12,7 @@
           cols="50"
           rows="3"
           maxlength="140"
-          placeholder="What's happening?"
+          [placeholder]="formPlaceholder"
           class="tweet-form-input"
           [(ngModel)]="form.text"
         ></textarea>
@@ -24,7 +24,7 @@
         </div>
         <div>
           <div>
-            <button class="btn-light" type="submit">Tweet</button>
+            <button class="btn-light" type="submit">{{ buttonText }}</button>
           </div>
         </div>
       </div>

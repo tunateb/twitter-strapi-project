@@ -5,6 +5,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { LandingpageComponent } from './pages/landingpage/landingpage.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { TweetDetailsPageComponent } from './pages/tweet-details-page/tweet-details-page.component';
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'home', component: HomepageComponent },
   { path: 'users/:id', component: ProfilePageComponent },
+  { path: 'tweets/:id', component: TweetDetailsPageComponent },
 ];
 
 @NgModule({

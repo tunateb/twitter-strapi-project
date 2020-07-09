@@ -4,7 +4,10 @@
   </div>
   <div class="bordered-container">
     <app-profile-header></app-profile-header>
-    <app-tweet-card *ngFor="let tweet of userTweets" [tweet] = "tweet"></app-tweet-card>
+    <app-tweet-card
+      *ngFor="let tweet of userTweets"
+      [tweet]="tweet"
+    ></app-tweet-card>
   </div>
   <div>
     <app-sidebar></app-sidebar>
