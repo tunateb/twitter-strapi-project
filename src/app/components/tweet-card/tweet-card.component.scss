@@ -1,9 +1,12 @@
 .tweet-card {
-  width: 100%;
   border-bottom: 1px solid #3a444c;
   padding: 15px;
-  display: flex;
-  cursor: pointer;
+
+  .card-wrapper {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+  }
 
   .avatar-wrapper {
     margin-right: 10px;
@@ -49,8 +52,41 @@
     color: #8a98a4;
     display: flex;
     justify-content: space-between;
-    padding-right: 80px;
+    padding: 0 60px;
     margin-top: 20px;
+
+    .link {
+      color: #8a98a4;
+    }
+
+    .btn-icon {
+      border: none;
+      background-color: transparent;
+      color: #8a98a4;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 5px;
+      outline: none;
+    }
+
+    .btn-icon-retweeted {
+      border: none;
+      background-color: transparent;
+      color: #059b19;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 5px;
+      outline: none;
+    }
+
+    .count {
+      font-size: 14px;
+    }
+
+    .count-retweeted {
+      font-size: 14px;
+      color: #059b19;
+    }
   }
 
   .reply-text {

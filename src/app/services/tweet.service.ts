@@ -33,4 +33,12 @@ export class TweetService {
       headers: { Authorization: `Bearer ${token}` },
     });
   }
+
+  updateTweet(tweet: Tweet) {
+    const token = window.localStorage.getItem('token');
+
+    return this.http.put(`${this.baseUrl}/tweets/${tweet.id}`, tweet, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  }
 }

@@ -34,10 +34,42 @@
     </div>
 
     <div class="tweet-actions">
-      <i class="far fa-comment"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="far fa-heart"></i>
-      <i class="fas fa-external-link-alt"></i>
+      <button class="btn-icon" (click)="goToTweetDetails()">
+        <i class="far fa-comment"></i>
+      </button>
+
+      <div>
+        <div *ngIf="!isRetweeted; else retweetedBtn">
+          <button class="btn-icon" (click)="retweet()">
+            <i class="fas fa-retweet"></i>
+          </button>
+          <span class="count"> {{ tweet.retweet }} </span>
+        </div>
+
+        <ng-template #retweetedBtn>
+          <button class="btn-icon-retweeted" (click)="removeRetweet()">
+            <i class="fas fa-retweet"></i>
+          </button>
+          <span class="count-retweeted"> {{ tweet.retweet }} </span>
+        </ng-template>
+      </div>
+
+      <div>
+        <div *ngIf="!isLiked; else likedBtn">
+          <button class="btn-icon" (click)="like()">
+            <i class="far fa-heart"></i>
+          </button>
+          <span class="count"> {{ tweet.like }} </span>
+        </div>
+        <ng-template #likedBtn>
+          <button class="btn-icon-retweeted" (click)="removeLike()">
+            <i class="far fa-heart"></i>
+          </button>
+          <span class="count-retweeted"> {{ tweet.like }} </span>
+        </ng-template>
+      </div>
+
+      <button class="btn-icon"><i class="fas fa-external-link-alt"></i></button>
     </div>
   </div>
 </div>

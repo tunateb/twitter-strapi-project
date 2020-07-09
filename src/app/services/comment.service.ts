@@ -33,4 +33,12 @@ export class CommentService {
   pushComment(newComment) {
     this.comments.push(newComment);
   }
+
+  updateComment(comment) {
+    const token = window.localStorage.getItem('token');
+
+    return this.http.put(`${this.baseUrl}/comments/${comment.id}`, comment, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  }
 }
