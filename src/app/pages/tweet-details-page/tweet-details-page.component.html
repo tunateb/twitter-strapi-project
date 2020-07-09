@@ -9,8 +9,18 @@
       <h3>Tweet</h3>
     </div>
     <app-detailed-tweet-card [tweet]="tweet"></app-detailed-tweet-card>
-    <app-tweetform [formPlaceholder] = "formPlaceholder" [buttonText] = "buttonText"></app-tweetform>
-    
+    <app-tweetform
+      [formPlaceholder]="formPlaceholder"
+      [buttonText]="buttonText"
+      [isComment]="true"
+    ></app-tweetform>
+    <div *ngIf="tweetComments">
+      <app-tweet-card
+        *ngFor="let comment of tweetComments"
+        [tweet]="comment"
+        [isComment]="true"
+      ></app-tweet-card>
+    </div>
   </div>
 
   <app-sidebar></app-sidebar>
