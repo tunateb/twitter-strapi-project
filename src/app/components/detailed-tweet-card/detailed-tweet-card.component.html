@@ -24,17 +24,17 @@
 
     <div class="reaction-count">
       <span class="retweet-count">
-        <strong>162</strong>
+        <strong>{{ tweet.retweet }}</strong>
         <span>Retweets and comments</span>
       </span>
       <span class="like-count">
-        <strong>1K</strong>
+        <strong>{{ tweet.like }}</strong>
         <span>Likes</span>
       </span>
     </div>
 
     <div class="tweet-actions">
-      <button class="btn-icon" (click)="goToTweetDetails()">
+      <button class="btn-icon">
         <i class="far fa-comment"></i>
       </button>
 
