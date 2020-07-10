@@ -1,0 +1,36 @@
+.card {
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  background-color: #1c2733;
+  border-radius: 14px;
+
+  .edit-form {
+    padding: 20px;
+
+    .form-title {
+        text-align: center;
+    }
+
+    .form-control {
+      margin: 15px 0;
+
+      label {
+          font-size: 14px;
+      }
+
+      .form-input {
+          width: 100%;
+          margin-top: 5px;
+          border: none;
+          outline: none;
+          padding: 10px;
+          border-radius: 4px;
+      }
+    }
+
+    .form-actions {
+        margin-top: 30px;
+    }
+  }
+}

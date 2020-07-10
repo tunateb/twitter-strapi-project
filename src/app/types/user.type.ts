@@ -8,4 +8,11 @@ export type User = {
   role: object;
   updated_at?: string;
   username: string;
+  profileName: string;
+  userInfoText: string;
+  userLocation: string;
+  userWebsite: string;
+  avatar: {
+    url: string;
+  }
 };

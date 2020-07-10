@@ -1,0 +1,52 @@
+<div class="card">
+  <form class="edit-form" (submit)="saveChanges()">
+    <h3 class="form-title">Edit Account Details</h3>
+    <div class="form-control">
+      <label for="username">New Username</label>
+      <input
+        type="text"
+        class="form-input"
+        name="username"
+        id="username"
+        [(ngModel)]="editForm.username"
+        [placeholder] = "user.username"
+      />
+    </div>
+    <div class="form-control">
+      <label for="email">New Email</label>
+      <input
+        type="email"
+        class="form-input"
+        name="email"
+        id="email"
+        [(ngModel)]="editForm.email"
+        [placeholder] = "user.email"
+      />
+    </div>
+    <div class="form-control">
+      <label for="password">New Password</label>
+      <input
+        type="password"
+        class="form-input"
+        name="password"
+        id="password"
+        [(ngModel)]="editForm.password"
+      />
+    </div>
+    <div class="form-control">
+      <label for="confirmPassword">Confirm New Password</label>
+      <input
+        type="password"
+        class="form-input"
+        name="confirmPassword"
+        id="confirmPassword"
+        [(ngModel)]="editForm.confirmPassword"
+      />
+    </div>
+    <div class="form-actions">
+      <button class="btn-light" type="submit" [disabled]="isLoading">
+        {{ isLoading ? "Saving..." : "Save Changes" }}
+      </button>
+    </div>
+  </form>
+</div>

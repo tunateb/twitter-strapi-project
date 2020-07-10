@@ -6,7 +6,7 @@
 
     <div class="tweet-info" *ngIf="tweet">
       <p class="user-info">
-        <span class="user-name">{{ tweet.user.username }}</span>
+        <span class="user-name">{{ tweet.user.profileName }}</span>
         <span class="user-username">@{{ tweet.user.username }} - </span>
         <span class="tweet-time">{{ tweet.created_at | date: "short" }}</span>
       </p>

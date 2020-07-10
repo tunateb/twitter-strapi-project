@@ -37,4 +37,12 @@ export class UserService {
       this.router.navigateByUrl(`/home`);
     }
   }
+
+  updateUser(data:object) {
+    const token = window.localStorage.getItem('token');
+
+    return this.http.put(`${this.baseUrl}/${this.user.id}`, data, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  }
 }

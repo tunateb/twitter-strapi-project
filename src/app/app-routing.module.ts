@@ -6,6 +6,8 @@ import { LandingpageComponent } from './pages/landingpage/landingpage.component'
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { TweetDetailsPageComponent } from './pages/tweet-details-page/tweet-details-page.component';
+import { EditProfilePageComponent } from './pages/edit-profile-page/edit-profile-page.component';
+import { EditAccountPageComponent } from './pages/edit-account-page/edit-account-page.component';
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'users/:id', component: ProfilePageComponent },
   { path: 'tweets/:id', component: TweetDetailsPageComponent },
+  { path: 'editprofile', component: EditProfilePageComponent },
+  { path: 'editaccount', component: EditAccountPageComponent },
 ];
 
 @NgModule({
